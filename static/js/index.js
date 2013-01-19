@@ -1,4 +1,3 @@
-
 exports.aceGetFilterStack = function(name, context){
   args = context;
   return [
