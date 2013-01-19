@@ -7,7 +7,7 @@ exports.aceGetFilterStack = function(name, context){
 
 
 exports.aceCreateDomLine = function(name, args){
-  if (args.cls.indexOf('image') > -1) {
+  if (args.cls.indexOf('image') > -1) { // If it's an image
     var src;
     cls = args.cls.replace(/(^| )image:(\S+)/g, function(x0, space, image) {
       src = image;
