@@ -1,14 +1,12 @@
 exports.aceGetFilterStack = function(name, context){
-  args = context;
   return [
-    args.linestylefilter.getRegexpFilter(
+    context.linestylefilter.getRegexpFilter(
       new RegExp("http.+((\.png)|(\.jpg))", "g"), 'image')
   ];
 }
 
 
-exports.aceCreateDomLine = function(name, context){
-  args = context;
+exports.aceCreateDomLine = function(name, args){
   if (args.cls.indexOf('image') > -1) {
     var src;
     cls = args.cls.replace(/(^| )image:(\S+)/g, function(x0, space, image) {
@@ -18,7 +16,7 @@ exports.aceCreateDomLine = function(name, context){
 
    return [{
      cls: cls,
-     extraOpenTags: '<img src="' + src + '" width="500px"/>',
+     extraOpenTags: '<img src="' + src + '" />',
      extraCloseTags:''
    }];
   }
