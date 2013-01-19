@@ -16,7 +16,7 @@ exports.aceCreateDomLine = function(name, args){
 
    return [{
      cls: cls,
-     extraOpenTags: '<img src="' + src + '" />',
+     extraOpenTags: '<img src="' + src + '" style="max-width:100%" />',
      extraCloseTags:''
    }];
   }
