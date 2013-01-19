@@ -1,0 +1,9 @@
+{
+  "name": "ep_previewImages",
+  "description": "Image previewer, paste the URL or an image or upload an image using ep_upload",
+  "version": "0.0.1",
+  "author": "johnyma22 (John McLear) <john@mclear.co.uk>",
+  "contributors": [ ],
+  "dependencies": { },
+  "engines": { "node": "*" }
+}
