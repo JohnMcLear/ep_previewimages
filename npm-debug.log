@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.1.33
+3 info using node@v0.8.1
+4 verbose config file /home/jose/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose publish [ '.' ]
+8 verbose read json /home/jose/etherpad-lite/node_modules/ep_previewImages/package.json
+9 verbose cache add [ '.', null ]
+10 silly cache add name=undefined spec="." args=[".",null]
+11 verbose parsed url { pathname: '.', path: '.', href: '.' }
+12 verbose lock . /home/jose/.npm/3a52ce780950d4d969792a2559cd519d7ee8c727--.lock
+13 verbose read json package.json
+14 verbose tar pack [ '/home/jose/tmp/npm-7301/1358563129367-0.5803435614798218/tmp.tgz',
+14 verbose tar pack   '.' ]
+15 verbose tarball /home/jose/tmp/npm-7301/1358563129367-0.5803435614798218/tmp.tgz
+16 verbose folder .
+17 info prepublish ep_previewImages@0.0.1
+18 verbose tar unpack /home/jose/tmp/npm-7301/1358563129367-0.5803435614798218/tmp.tgz
+19 silly gunzTarPerm modes [ '755', '644' ]
+20 silly gunzTarPerm extractEntry package.json
+21 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+22 silly gunzTarPerm extractEntry .npmignore
+23 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+24 silly gunzTarPerm extractEntry hooks.js
+25 silly gunzTarPerm modified mode [ 'hooks.js', 436, 420 ]
+26 silly gunzTarPerm extractEntry ep.json
+27 silly gunzTarPerm modified mode [ 'ep.json', 436, 420 ]
+28 silly gunzTarPerm extractEntry templates/scripts.ejs
+29 silly gunzTarPerm modified mode [ 'templates/scripts.ejs', 436, 420 ]
+30 silly gunzTarPerm extractEntry static/html/invalid.png
+31 silly gunzTarPerm modified mode [ 'static/html/invalid.png', 436, 420 ]
+32 silly gunzTarPerm extractEntry static/html/invalid.svg
+33 silly gunzTarPerm modified mode [ 'static/html/invalid.svg', 436, 420 ]
+34 silly gunzTarPerm extractEntry static/css/main.css
+35 silly gunzTarPerm modified mode [ 'static/css/main.css', 436, 420 ]
+36 silly gunzTarPerm extractEntry static/css/ace.css
+37 silly gunzTarPerm modified mode [ 'static/css/ace.css', 436, 420 ]
+38 silly gunzTarPerm extractEntry static/js/index.js
+39 silly gunzTarPerm modified mode [ 'static/js/index.js', 436, 420 ]
+40 verbose read json /home/jose/tmp/npm-7301/1358563129367-0.5803435614798218/package/package.json
+41 verbose from cache /home/jose/tmp/npm-7301/1358563129367-0.5803435614798218/package/package.json
+42 verbose tar pack [ '/home/jose/.npm/ep_previewImages/0.0.1/package.tgz',
+42 verbose tar pack   '/home/jose/tmp/npm-7301/1358563129367-0.5803435614798218/package' ]
+43 verbose tarball /home/jose/.npm/ep_previewImages/0.0.1/package.tgz
+44 verbose folder /home/jose/tmp/npm-7301/1358563129367-0.5803435614798218/package
+45 verbose tar unpack /home/jose/.npm/ep_previewImages/0.0.1/package.tgz
+46 silly gunzTarPerm modes [ '755', '644' ]
+47 silly gunzTarPerm extractEntry package.json
+48 silly gunzTarPerm extractEntry .npmignore
+49 silly gunzTarPerm extractEntry hooks.js
+50 silly gunzTarPerm extractEntry ep.json
+51 silly gunzTarPerm extractEntry templates/scripts.ejs
+52 silly gunzTarPerm extractEntry static/html/invalid.png
+53 silly gunzTarPerm extractEntry static/html/invalid.svg
+54 silly gunzTarPerm extractEntry static/css/main.css
+55 silly gunzTarPerm extractEntry static/css/ace.css
+56 silly gunzTarPerm extractEntry static/js/index.js
+57 verbose read json /home/jose/.npm/ep_previewImages/0.0.1/package/package.json
+58 silly shasum updated bytes 18124
+59 info shasum aa594cc1d553dc0305141c854cfdd89a94e0ef99
+59 info shasum /home/jose/.npm/ep_previewImages/0.0.1/package.tgz
+60 verbose from cache /home/jose/.npm/ep_previewImages/0.0.1/package/package.json
+61 verbose chmod /home/jose/.npm/ep_previewImages/0.0.1/package.tgz 644
+62 verbose chown /home/jose/.npm/ep_previewImages/0.0.1/package.tgz [ 1000, 1000 ]
+63 silly publish { name: 'ep_previewImages',
+63 silly publish   description: 'Image previewer, paste the URL or an image or upload an image using ep_upload',
+63 silly publish   version: '0.0.1',
+63 silly publish   author:
+63 silly publish    { name: 'johnyma22',
+63 silly publish      email: 'john@mclear.co.uk',
+63 silly publish      url: 'John McLear' },
+63 silly publish   contributors: [],
+63 silly publish   dependencies: {},
+63 silly publish   engines: { node: '*' },
+63 silly publish   _id: 'ep_previewImages@0.0.1',
+63 silly publish   dist: { shasum: 'aa594cc1d553dc0305141c854cfdd89a94e0ef99' } }
+64 verbose url raw ep_previewImages
+65 verbose url resolving [ 'https://registry.npmjs.org/', './ep_previewImages' ]
+66 verbose url resolved https://registry.npmjs.org/ep_previewImages
+67 info retry registry request attempt 1 at 02:38:49
+68 http PUT https://registry.npmjs.org/ep_previewImages
+69 http 403 https://registry.npmjs.org/ep_previewImages
+70 error publish Failed PUT response 403
+71 error Error: forbidden New packages must have all-lowercase names: ep_previewImages
+71 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:14)
+71 error     at Request.init.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/main.js:119:22)
+71 error     at Request.EventEmitter.emit (events.js:91:17)
+71 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/main.js:521:16)
+71 error     at Request.EventEmitter.emit (events.js:88:17)
+71 error     at IncomingMessage.Request.start.self.req.self.httpModule.request.buffer (/usr/local/lib/node_modules/npm/node_modules/request/main.js:483:14)
+71 error     at IncomingMessage.EventEmitter.emit (events.js:115:20)
+71 error     at IncomingMessage._emitEnd (http.js:366:10)
+71 error     at HTTPParser.parserOnMessageComplete [as onMessageComplete] (http.js:149:23)
+71 error     at CleartextStream.socketOnData [as ondata] (http.js:1356:20)
+71 error  [Error: forbidden New packages must have all-lowercase names: ep_previewImages]
+72 error You may report this log at:
+72 error     <http://github.com/isaacs/npm/issues>
+72 error or email it to:
+72 error     <npm-@googlegroups.com>
+73 error System Linux 3.2.0-36-generic
+74 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+75 error cwd /home/jose/etherpad-lite/node_modules/ep_previewImages
+76 error node -v v0.8.1
+77 error npm -v 1.1.33
+78 error message forbidden New packages must have all-lowercase names: ep_previewImages
+79 verbose exit [ 1, true ]
