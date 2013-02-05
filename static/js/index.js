@@ -16,10 +16,48 @@ exports.aceCreateDomLine = function(name, args){
 
    return [{
      cls: cls,
-     extraOpenTags: '<img src="' + src + '" style="max-width:100%" />',
+     extraOpenTags: '<img contenteditable=false unselectable=on src="' + src + '" style="max-width:100%" />',
      extraCloseTags:''
    }];
   }
+
 }
 
 
+
+exports.postAceInit = function(){
+// left in for posterity but none of this will stop firefox from putting it's claws into object resizing.
+
+var iframe = getElementByIdInFrames("innerdocbody", window);
+$(iframe).webkitimageresize().webkittableresize().webkittdresize();
+// returns Cannot read property 'length' of null 
+
+/* 
+  // Designed to change the listener on resize
+  getElementByIdInFrames("innerdocbody", window).addEventListener('DOMAttrModified', 
+    function(e){
+      
+      if(e.target.tagName=='IMG'
+      && e.attrName=='style' 
+      && e.newValue.match(/width|height/)){
+        alert("Want image resize?  Contact john@mclear.co.uk to sponsor development!");
+        // send a message to the server
+      }
+    }, 
+    false
+  );
+*/
+
+}
+function getElementByIdInFrames(id, base) {
+  var el;
+  if(el = base.document.getElementById(id)) {
+    return el;
+  }
+ 
+  for(var i = 0, len = base.frames.length; i < len; i++) {
+    if(el = getElementByIdInFrames(id, base.frames[i])) {
+      return el;
+    }
+  }
+}

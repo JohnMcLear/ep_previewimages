@@ -2,9 +2,13 @@
   "parts": [
     {
       "name": "ep_previewimages",
+      "hooks": {
+        "eejsBlock_scripts": "ep_previewimages/scripts"
+      },
       "client_hooks": {
         "aceGetFilterStack": "ep_previewimages/static/js/index:aceGetFilterStack",
-        "aceCreateDomLine": "ep_previewimages/static/js/index:aceCreateDomLine"
+        "aceCreateDomLine": "ep_previewimages/static/js/index:aceCreateDomLine",
+        "postAceInit" : "ep_previewimages/static/js/index"
       }
     }
   ]
