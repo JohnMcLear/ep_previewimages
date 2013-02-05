@@ -29,13 +29,17 @@ exports.postAceInit = function(){
 // left in for posterity but none of this will stop firefox from putting it's claws into object resizing.
 
 // cleanish javascript approach
-var iframe = getElementByIdInFrames("innerdocbody", window);
-$(iframe).webkitimageresize().webkittableresize().webkittdresize();
+// var iframe = getElementByIdInFrames("innerdocbody", window);
+// $(iframe).webkitimageresize().webkittableresize().webkittdresize();
 // returns:  Cannot read property 'length' of null 
 
 // kinda ugly jquery approach
-$('iframe.[name="ace_outer"]').contents().find('iframe').contents().find("#innerdocbody").webkitimageresize().webkittableresize().webkittdresize();
+// $('iframe.[name="ace_outer"]').contents().find('iframe').contents().find("#innerdocbody").webkitimageresize().webkittableresize().webkittdresize();
 // returns:  Cannot read property 'length' of null
+
+// doesn't return an error which is nice..
+$("#innerdocbody").webkitimageresize().webkittableresize().webkittdresize();
+
 
 /* 
   // Designed to change the listener on resize
@@ -66,3 +70,9 @@ function getElementByIdInFrames(id, base) {
     }
   }
 }
+
+exports.aceInitInnerdocbodyHead = function(hook_name, args, cb){
+  args.iframeHTML.push('<script type="text/javascript" src="http://www.editorboost.net/Scripts/jquery.webkitresize.min.js"/></script>');
+  return cb();
+}
+

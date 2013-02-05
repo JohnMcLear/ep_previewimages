@@ -6,6 +6,7 @@
         "eejsBlock_scripts": "ep_previewimages/scripts"
       },
       "client_hooks": {
+        "aceInitInnerdocbodyHead": "ep_previewimages/static/js/index",
         "aceGetFilterStack": "ep_previewimages/static/js/index:aceGetFilterStack",
         "aceCreateDomLine": "ep_previewimages/static/js/index:aceCreateDomLine",
         "postAceInit" : "ep_previewimages/static/js/index"
