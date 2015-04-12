@@ -14,11 +14,13 @@ exports.aceCreateDomLine = function(name, args){
       return space + "image image_" + image;
     });
 
-   return [{
-     cls: cls,
-     extraOpenTags: '<img src="' + src + '" style="max-width:100%" /><br/>',
-     extraCloseTags:''
-   }];
+
+    // Note the additional span wrapper here is required to stop errors if someone types text after an image url
+    return [{
+      cls: cls,
+      extraOpenTags: '<span style="display:block;"><img src="' + src + '" style="max-width:100%" /></span>',
+      extraCloseTags:''
+    }];
   }
 }
 
