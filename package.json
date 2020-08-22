@@ -1,7 +1,7 @@
 {
   "name": "ep_previewimages",
   "description": "Image previewer, paste the URL of an image or upload an image using ep_fileupload",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "johnyma22 (John McLear) <john@mclear.co.uk>",
   "contributors": [],
   "dependencies": {},
