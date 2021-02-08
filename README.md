@@ -1,3 +1,5 @@
+![Publish Status](https://github.com/ether/ep_previewimages/workflows/Node.js%20Package/badge.svg) ![Backend Tests Status](https://github.com/ether/ep_previewimages/workflows/Backend%20tests/badge.svg)
+
 [![Travis (.org)](https://api.travis-ci.org/JohnMcLear/ep_previewimages.git.svg?branch=develop)](https://travis-ci.org/github/JohnMcLear/ep_previewimages.git)
 
 # My awesome plugin README example
